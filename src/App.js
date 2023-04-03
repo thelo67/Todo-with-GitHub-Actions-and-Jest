@@ -7,10 +7,17 @@ const App = () => {
   const [todos, setTodos] = useState([]);
 
   const addTodo = () => {
-    if(todo !== "") {
+    if (todo !== "") {
       setTodos([...todos, todo]);
       setTodo("");
     }
+  };
+
+  const deleteTodo = (text) => {
+    const newTodos = todos.filter((todo) => {
+      return todo !== text;
+    });
+    setTodos(newTodos);
   };
 
   return (
@@ -38,7 +45,14 @@ const App = () => {
           {todos.map((todo, index) => (
             <div className="todo">
               <li key={index}> {todo} </li>
-              <button className="delete-button">Delete</button>
+              <button
+                className="delete-button"
+                onClick={() => {
+                  deleteTodo(todo);
+                }}
+              >
+                Delete
+              </button>
             </div>
           ))}
         </ul>
