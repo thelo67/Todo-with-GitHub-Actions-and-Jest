@@ -2,7 +2,7 @@
   "name": "todo-with-github-actions-and-jest",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://thelo67.github.io/todo-with-github-actions-and-jest/todo-with-github-actions-and-jest",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
